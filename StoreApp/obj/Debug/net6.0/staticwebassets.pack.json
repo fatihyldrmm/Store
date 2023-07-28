@@ -9,8 +9,64 @@
       "PackagePath": "staticwebassets\\html\\Error.html"
     },
     {
-      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpg",
-      "PackagePath": "staticwebassets\\images\\default.jpg"
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\airpods.jpeg",
+      "PackagePath": "staticwebassets\\images\\airpods.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\beloved.jpeg",
+      "PackagePath": "staticwebassets\\images\\beloved.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\camera.jpeg",
+      "PackagePath": "staticwebassets\\images\\camera.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpeg",
+      "PackagePath": "staticwebassets\\images\\default.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\hamlet.jpeg",
+      "PackagePath": "staticwebassets\\images\\hamlet.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\historybook.jpeg",
+      "PackagePath": "staticwebassets\\images\\historybook.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\homosapiens.jpeg",
+      "PackagePath": "staticwebassets\\images\\homosapiens.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\insan.jpeg",
+      "PackagePath": "staticwebassets\\images\\insan.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\joystick.jpeg",
+      "PackagePath": "staticwebassets\\images\\joystick.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\keyboard.jpeg",
+      "PackagePath": "staticwebassets\\images\\keyboard.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\laptop.jpeg",
+      "PackagePath": "staticwebassets\\images\\laptop.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\laptop2.jpeg",
+      "PackagePath": "staticwebassets\\images\\laptop2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\monitor.jpeg",
+      "PackagePath": "staticwebassets\\images\\monitor.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\mouse.jpeg",
+      "PackagePath": "staticwebassets\\images\\mouse.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\images\\tv.jpeg",
+      "PackagePath": "staticwebassets\\images\\tv.jpeg"
     },
     {
       "Id": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",

@@ -1,18 +1,18 @@
 @model ProductDtoForUpdate
 
 <div class="text-center">
-    <div class="display-6">Create</div>
+    <div class="display-6">Update</div>
 </div>
 
 <form method="post" asp-action="Update">
-    
+
     <div class="text-danger" asp-validation-summary="All"></div>
-    
+
     <input type="hidden" asp-for="ProductId" />
 
     <div class="form-group my-3">
-        <label asp-for="CategoryId"></label>
-        <select class="form-control" asp-items="@ViewBag.Categories" asp-for="CategoryId">  
+        <label asp-for="CategoryId">Category Name</label>
+        <select class="form-control" asp-items="@ViewBag.Categories" asp-for="CategoryId">
         </select>
     </div>
 
@@ -20,10 +20,26 @@
         <label asp-for="ProductName"></label>
         <input asp-for="ProductName" class="form-control" />
     </div>
+
+    <div class="form-group my-3">
+        <label asp-for="Summary"></label>
+        <input asp-for="Summary" class="form-control" />
+    </div>
+    
     <div class="form-group my-3">
         <label asp-for="Price"></label>
         <input asp-for="Price" class="form-control" />
     </div>
+    
+    <div class="form-group my-3">
+        <img class="rounded shadow" width="150" src="@Model?.ImageUrl" />
+    </div>
+    
+    <div class="form-group my-3">
+        <label asp-for="ImageUrl"></label>
+        <input type="file" name="file" class="form-control" />
+    </div>
+    
     <div class="form-group my-3">
         <div class="btn-group">
             <button class="btn btn-primary" type="submit">
