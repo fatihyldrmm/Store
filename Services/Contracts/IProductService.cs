@@ -12,5 +12,9 @@ namespace Services.Contracts
         void UpdateOneProduct(ProductDtoForUpdate productDto);
         void DeleteOneProduct(int id);
         ProductDtoForUpdate GetOneProductForUpdate(int id, bool trackChanges);
+
+
+        void UpdateProduct(UpdateProductRequest request);
+        UpdateProductSpecs GetUpdateProductSpecs(int id);
     }
 }

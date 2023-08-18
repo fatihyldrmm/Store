@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Fatih\\.nuget\\packages\\": {}
+    "C:\\Users\\fatih\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\fatih\\Desktop\\Fatih\\GitHub_Repolarim\\Store\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\Fatih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fatih\\Desktop\\MVC\\Store\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\fatih\\Desktop\\Fatih\\GitHub_Repolarim\\Store\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\fatih\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fatih\\Desktop\\Fatih\\GitHub_Repolarim\\Store\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Fatih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fatih\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

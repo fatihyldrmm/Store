@@ -2,6 +2,8 @@ using Entities.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Services.Contracts;
+using StoreApp.Areas.Admin.ViewModels;
+
 
 namespace StoreApp.Areas.Admin.Controllers
 {
@@ -91,6 +93,47 @@ namespace StoreApp.Areas.Admin.Controllers
         {
             _manager.ProductService.DeleteOneProduct(id);
             return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public IActionResult Update2(int id)
+        {
+            var specs = _manager.ProductService.GetUpdateProductSpecs(id);
+
+            UpdateProductVM viewModel = new UpdateProductVM(specs);
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update2([FromRoute(Name = "id")] int id, [FromForm] UpdateProductVM viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                if (viewModel.file != null)
+                {
+                    // file operation
+                    string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", viewModel.file.FileName);
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        await viewModel.file.CopyToAsync(stream);
+                    }
+
+                    viewModel.ImageUrl = String.Concat("/images/", viewModel.file.FileName);
+                }
+
+
+                _manager.ProductService.UpdateProduct(viewModel);
+                return RedirectToAction("Index");
+            }
+
+            var specs = _manager.ProductService.GetUpdateProductSpecs(id);
+            viewModel.SetSpecs(specs);
+
+            return View(viewModel);
         }
     }
 }
