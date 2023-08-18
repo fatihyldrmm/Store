@@ -19,11 +19,16 @@ namespace Services
 
         public void CreateProduct(ProductDtoForInsertion productDto)
         {
+            Category category = _manager.Category.FindAll(false).First(c => c.CategoryId == productDto.CategoryId);
+
+            ProductDtoForInsertion r = productDto; //constructor daha kısa olsun diye
+            Product product2 = new Product(r.ProductName, r.Price, r.Summary, r.ImageUrl, category);
+
             Product product = _mapper.Map<Product>(productDto);
             _manager.Product.Create(product);
             _manager.Save();
         }
-        
+
         public void DeleteOneProduct(int id)
         {
             var product = GetOneProduct(id, false);
@@ -56,13 +61,45 @@ namespace Services
 
         public void UpdateOneProduct(ProductDtoForUpdate productDto)
         {
+            try
+            {
+                var entity = _mapper.Map<Product>(productDto);
+                _manager.Product.UpdateOneProduct(entity);
+                _manager.Save();
+            }
+            catch (Exception e)
+            {
+
+                //var response = new UpdateProductResponse(false, e.Message);
+            }
             // var entity = _manager.Product.GetOneProduct(productDto.ProductId, true);
             // entity.ProductName = productDto.ProductName;
             // entity.Price = productDto.Price;
             // entity.CategoryId = productDto.CategoryId;
-            var entity = _mapper.Map<Product>(productDto);
-            _manager.Product.UpdateOneProduct(entity);
-             _manager.Save();
+
+        }
+
+        public void UpdateProduct(UpdateProductRequest request)
+        {
+            var product = GetOneProduct(request.ProductId, true);
+
+            Category category = _manager.Category.FindAll(false).First(c => c.CategoryId == request.CategoryId);
+
+
+            product.Update(request.ProductName, request.Price, request.Summary, request.ImageUrl, category);
+
+            _manager.Product.UpdateOneProduct(product);
+            _manager.Save();
+        }
+
+        public UpdateProductSpecs GetUpdateProductSpecs(int id){
+            
+            var product = GetOneProduct(id, false);
+            var categories = _manager.Category.FindAll(false).ToList();
+
+            UpdateProductSpecs specs = new UpdateProductSpecs{Product = product, Categories = categories};
+
+            return specs;
         }
     }
 }
