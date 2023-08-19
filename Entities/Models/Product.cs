@@ -87,10 +87,37 @@ public class Product
 
         Summary = summary;
 
-        if(!string.IsNullOrEmpty(imageUrl))
+        if (!string.IsNullOrEmpty(imageUrl))
             ImageUrl = imageUrl;
-            
+
         CategoryId = category.CategoryId;
         Category = category;
     }
+    public void Create(string? name, decimal price, string? summary, string? imageUrl, Category category)
+    {
+        ProductName = name;
+
+        if (string.IsNullOrEmpty(ProductName) || string.IsNullOrWhiteSpace(ProductName))
+            throw new Exception("Lütfen ürün ismini giriniz");
+
+        ProductName = ProductName.Trim();
+
+        if (ProductName.Length > 100)
+            throw new Exception("Ürün ismi 100 karakterden uzun olamaz.");
+
+        Price = price;
+
+        if (Price <= 0)
+            throw new Exception("Ürün fiyatı 0 ve 0'dan küçük olamaz.");
+
+        Summary = summary;
+
+        if (!string.IsNullOrEmpty(imageUrl))
+            ImageUrl = imageUrl;
+
+        CategoryId = category.CategoryId;
+        Category = category;
+    }
+
+
 }
