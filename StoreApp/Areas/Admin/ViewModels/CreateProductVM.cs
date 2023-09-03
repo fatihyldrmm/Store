@@ -7,13 +7,36 @@ namespace StoreApp.Areas.Admin.ViewModels
 {
     public record CreateProductVM : CreateProductRequest
     {
-        [Required(ErrorMessage = "Ürün resmi gereklidir.")]
         public IFormFile? ImageFile { get; set; }
-
-        [Required(ErrorMessage = "Kategori seçimi zorunludur.")]
         public int SelectedCategoryId { get; set; }
-        
         public SelectList Categories { get; set; }
+
+        CreateProductVM() { }
+
+        CreateProductVM(CreateProductSpecs specs)
+        {
+            ProductId = specs.Product.ProductId;
+            ProductName = specs.Product.ProductName;
+            Price = specs.Product.Price;
+            Summary = specs.Product.Summary;
+            ImageUrl = specs.Product.ImageUrl;
+
+            Categories = new SelectList(specs.Categories,
+                "CategoryId",
+                "CategoryName", CategoryId);
+        }
+
+        public void SetSpecs(CreateProductSpecs specs)
+        {
+
+            if (string.IsNullOrEmpty(ImageUrl))
+                ImageUrl = specs.Product.ImageUrl;
+
+            Categories = new SelectList(specs.Categories,
+                "CategoryId",
+                "CategoryName", CategoryId);
+        }
+
     }
 }
 
