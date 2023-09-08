@@ -7,7 +7,7 @@ namespace Services
     public class OrderManager : IOrderService
     {
         private readonly IRepositoryManager _manager;
-
+        
         public OrderManager(IRepositoryManager manager)
         {
             _manager = manager;
