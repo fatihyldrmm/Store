@@ -93,12 +93,13 @@ namespace Services
             _manager.Save();
         }
 
-        public UpdateProductSpecs GetUpdateProductSpecs(int id){
-            
+        public UpdateProductSpecs GetUpdateProductSpecs(int id)
+        {
+
             var product = GetOneProduct(id, false);
             var categories = _manager.Category.FindAll(false).ToList();
 
-            UpdateProductSpecs specs = new UpdateProductSpecs{Product = product, Categories = categories};
+            UpdateProductSpecs specs = new UpdateProductSpecs { Product = product, Categories = categories };
 
             return specs;
         }
@@ -113,5 +114,14 @@ namespace Services
         {
             return _manager.Product.GetAllProductsWithDetails(p);
         }
+
+        public IEnumerable<Product> GetLastestProducts(int n, bool trackChanges)
+        {
+            return _manager.Product
+                .FindAll(trackChanges)
+                .OrderByDescending(prd => prd.ProductId)
+                .Take(n);
+        }
+
     }
 }
