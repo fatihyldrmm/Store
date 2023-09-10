@@ -18,7 +18,7 @@ public class Product
 
     public Category? Category { get; set; } // Navigation Property
 
-
+    public bool ShowCase { get; set; }
     public Product() { }
 
 

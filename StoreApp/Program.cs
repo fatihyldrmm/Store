@@ -6,6 +6,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages();//artık controller olmadanda razor pageleri kullanabilecek bir servisi uygulamamıza dahil etmiş olduk.
 
+
 builder.Services.ConfigureDbContext(builder.Configuration);
 
 builder.Services.ConfigureSession();
@@ -13,6 +14,9 @@ builder.Services.ConfigureSession();
 builder.Services.ConfigureRepositoryRegisteration();
 
 builder.Services.ConfigureServiceRegisteration();
+
+builder.Services.ConfigureRouting();
+
 
 builder.Services.AddAutoMapper(typeof(Program));
 
@@ -35,5 +39,9 @@ app.UseEndpoints(endpoints =>
 
     endpoints.MapRazorPages();//Razor pagelerimiz için endpoint yapısını aktifleştirdik.
 });
+
+app.ConfigureAndCheckMigration();
+
+app.ConfigureLocalization();
 
 app.Run();

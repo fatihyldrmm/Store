@@ -21,5 +21,14 @@ namespace StoreApp.Infrastructe.Extensions
                 ? default(T)
                 : JsonSerializer.Deserialize<T>(data);
         }
+
+        public static void ConfigureRouting(this IServiceCollection services)
+        {
+            services.AddRouting(options=>
+            {
+                options.LowercaseUrls = true;
+                options.AppendTrailingSlash = false;
+            });
+        }
     }
 }

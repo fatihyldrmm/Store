@@ -1,6 +1,7 @@
 using AutoMapper;
 using Entities.Dtos;
 using Entities.Models;
+using Entities.RequestParameters;
 using Repositories.Contracts;
 using Services.Contracts;
 
@@ -100,6 +101,17 @@ namespace Services
             UpdateProductSpecs specs = new UpdateProductSpecs{Product = product, Categories = categories};
 
             return specs;
+        }
+
+        public IEnumerable<Product> GetShowCaseProducts(bool trackChanges)
+        {
+            var products = _manager.Product.GetShowCaseProducts(trackChanges);
+            return products;
+        }
+
+        public IEnumerable<Product> GetAllProductsWithDetails(ProductRequestParameters p)
+        {
+            return _manager.Product.GetAllProductsWithDetails(p);
         }
     }
 }
