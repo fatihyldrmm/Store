@@ -128,3 +128,4 @@ C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\StoreApp\obj\Debug\net6.0\re
 C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\StoreApp\obj\Debug\net6.0\StoreApp.pdb
 C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\StoreApp\obj\Debug\net6.0\StoreApp.genruntimeconfig.cache
 C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\StoreApp\obj\Debug\net6.0\ref\StoreApp.dll
+C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\StoreApp\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

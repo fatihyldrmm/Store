@@ -21,3 +21,4 @@ C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\Entities\obj\Debug\net6.0\En
 C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\Entities\obj\Debug\net6.0\refint\Entities.dll
 C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\Entities\obj\Debug\net6.0\Entities.pdb
 C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\Entities\obj\Debug\net6.0\ref\Entities.dll
+C:\Users\fatih\Desktop\Fatih\GitHub_Repolarim\Store\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
