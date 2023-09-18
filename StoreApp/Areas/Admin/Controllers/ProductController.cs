@@ -110,6 +110,7 @@ namespace StoreApp.Areas.Admin.Controllers
 
             return View(viewModel);
         }
+        [HttpGet]
         public IActionResult Update([FromRoute(Name = "id")] int id)
         {
             ViewBag.Categories = GetCategoriesSelectList();
